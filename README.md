@@ -6,7 +6,7 @@
 
 > CI for Android Firmwares Dumps
 
-This CI uses the [DumprX](https://github.com/Van-Firmware-Dumps/DumprX) to dump Android firmwares.
+This CI uses the [DumprX-Script](https://github.com/Vuong-Android-Dumps/DumprX-Script) to dump Android firmwares.
 
 ## Update feed
 
