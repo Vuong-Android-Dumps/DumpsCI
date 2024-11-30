@@ -66,6 +66,12 @@ jobs:
          working-directory: DumprX
          run: |
               $EXTRA_CMD
+              df -h
+              aria2c -o TB321FU.zip -x16 --continue=true --console-log-level=warn --summary-interval=0 --check-certificate=false "https://mirrors.lolinet.com/firmware/lenowow/2024/Y700_2025/TB321FU/TB321FU_ROW_OPEN_USER_Q00040.0_U_ZUI_16.1.10.017_ST_241105.zip"
+              7z e -y -oTB321FU TB321FU.zip && rm TB321FU.zip && cd TB321FU
+              mv super_2.img odm.img && mv super_3.img product.img && mv super_4.img system.img && mv super_5.img system_dlkm.img && mv super_6.img system_ext.img && mv super_7.img vendor.img && mv super_8.img vendor_dlkm.img && cd ..
+              zip -r TB321FU.zip TB321FU && rm -rf TB321FU
+              df -h
 
        - name: Start Dumping
          working-directory: DumprX
