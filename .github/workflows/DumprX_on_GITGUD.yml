@@ -68,8 +68,8 @@ jobs:
               $EXTRA_CMD
               df -h
               pip3 install git+https://github.com/ananjaser1211/samloader.git
-              samloader -m SM-F958N -r KOO -i 355351581338306 download -O .
-              rm samloader.log && mv $(ls *SM-F958N*.zip*) firmware.zip
+              samloader -m SM-W7025 -r CHC -i 351765210155456 download -O .
+              rm samloader.log && mv $(ls *SM-W7025*.zip*) firmware.zip
               df -h
 
        - name: Start Dumping
